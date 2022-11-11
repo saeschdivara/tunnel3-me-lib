@@ -60,7 +60,7 @@ module.exports = {
 `;
 
   fs.writeFile(
-    `${__dirname}/../src/main/frontend/build/ngrok.config.js`,
+    `${__dirname}/../../../src/main/frontend/build/ngrok.config.js`,
     assetsConfigFile,
     err => {
       // throws an error, you could also catch it here
@@ -75,7 +75,7 @@ addon:
 `;
 
   fs.writeFile(
-    `${__dirname}/../src/main/resources/application-ngrok.yml`,
+    `${__dirname}/../../../src/main/resources/application-ngrok.yml`,
     appConfigFile,
     err => {
       // throws an error, you could also catch it here
@@ -100,7 +100,7 @@ addon:
   console.log(`Confluence App Install-URL: ${webAppUrl}/atlassian-connect.json`);
 
   const result = await execute(
-    'bin/' + binaryName,
+    `${__dirname}/bin/${binaryName}`,
     [`ws://tunnel3.me:${websocketPort}/`, port],
     ''
   );
