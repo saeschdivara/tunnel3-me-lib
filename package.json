@@ -5,8 +5,10 @@
   "main": "index.mjs",
   "author": "Sascha Häusler <sascha.haeusler@bitvoodoo.ch>",
   "license": "MIT",
-
   "scripts": {
     "postinstall": "node ./postinstall.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.0"
   }
 }
