@@ -1,0 +1,12 @@
+{
+  "name": "tunnel3-me",
+  "version": "1.0.0",
+  "description": "ngrok alternative",
+  "main": "index.mjs",
+  "author": "Sascha Häusler <sascha.haeusler@bitvoodoo.ch>",
+  "license": "MIT",
+
+  "scripts": {
+    "postinstall": "node ./postinstall.js"
+  }
+}
