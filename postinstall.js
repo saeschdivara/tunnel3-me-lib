@@ -17,7 +17,13 @@ else if (os.platform() === 'win32') {
   osPrefix = 'windows.exe'
 }
 
-const binaryName = 'tunnel3MeLocal_' + osPrefix
+let architecturePostfix = '';
+
+if (os.arch() === 'arm64') {
+  architecturePostfix = '_arm';
+}
+
+const binaryName = 'tunnel3MeLocal_' + osPrefix + architecturePostfix
 const binaryPath = 'bin/' + binaryName
 
 if (!fs.existsSync('bin')) {
