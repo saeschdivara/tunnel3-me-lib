@@ -95,7 +95,13 @@ addon:
     osPrefix = 'windows.exe'
   }
 
-  const binaryName = 'tunnel3MeLocal_' + osPrefix
+  let architecturePostfix = '';
+
+  if (os.arch() === 'arm64') {
+    architecturePostfix = '_arm';
+  }
+
+  const binaryName = 'tunnel3MeLocal_' + osPrefix + architecturePostfix;
 
   console.log(`Confluence App Install-URL: ${webAppUrl}/atlassian-connect.json`);
 
