@@ -68,22 +68,6 @@ module.exports = {
     }
   );
 
-  const e2eConfigFile = `const BASE_URL = '${webAppUrl}';
-export default { BASE_URL };
-`;
-  const e2ePath = `${__dirname}/../../../src/main/frontend/e2e/tests`;
-
-  if (fs.existsSync(e2ePath)) {
-    fs.writeFile(
-      `${e2ePath}/config.ts`,
-      e2eConfigFile,
-      err => {
-        // throws an error, you could also catch it here
-        if (err) throw err;
-      }
-    );
-  }
-
   const appConfigFile = `
 addon:
   base-url: ${webAppUrl}
