@@ -40,11 +40,11 @@ function execute(fileName, params, path) {
     '-'
   )}-bitvoodoo`;
 
-  const webAppUrl = `https://${subDomainApp}.tunnel3.me`;
-  const assetsUrl = `https://assets-${subDomainApp}.tunnel3.me`;
+  const webAppUrl = `https://${subDomainApp}.tunneling.bitvoodoo.cloud`;
+  const assetsUrl = `https://assets-${subDomainApp}.tunneling.bitvoodoo.cloud`;
 
   const hostCreationResult = await fetch(
-    `https://config.tunnel3.me/create-host/${subDomainApp}`
+    `https://config.tunneling.bitvoodoo.cloud/create-host/${subDomainApp}`
   ).then(r => r.json());
   const websocketPort = hostCreationResult.result;
 
@@ -107,7 +107,7 @@ addon:
 
   const result = await execute(
     `${__dirname}/bin/${binaryName}`,
-    [`ws://tunnel3.me:${websocketPort}/`, port],
+    [`ws://tunneling.bitvoodoo.cloud:${websocketPort}/`, port],
     ''
   );
 

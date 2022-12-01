@@ -1,6 +1,6 @@
 {
   "name": "@bitvoodoo/tunnel3-me",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ngrok alternative",
   "main": "index.mjs",
   "author": "Sascha Häusler <sascha.haeusler@bitvoodoo.ch>",
